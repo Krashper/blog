@@ -247,6 +247,30 @@ font-size:1em;
 background:#F4725C;
 font-family: 'Source Sans Pro', sans-serif;
 }
+.search input[type="email"] {
+	padding:7px 8px;
+	font-weight: 300;
+	color: #fff;
+	border: none;
+	outline: none;
+	width: 85%;
+	font-weight:400;
+	font-size:1em;
+	background:#F4725C;
+	font-family: 'Source Sans Pro', sans-serif;
+}
+.search input[type="password"] {
+	padding:7px 8px;
+	font-weight: 300;
+	color: #fff;
+	border: none;
+	outline: none;
+	width: 85%;
+	font-weight:400;
+	font-size:1em;
+	background:#F4725C;
+	font-family: 'Source Sans Pro', sans-serif;
+}
 .search input[type="submit"] {
 background: url(../images/splits.png) no-repeat -202px -6px;
 border: none;
@@ -409,6 +433,7 @@ font-size: 2em;
 margin-bottom: 1em;
 font-family: 'Oswald', sans-serif;
 }
+
 .contact form input[type="text"],.contact-right textarea {
 width: 100%;
 padding: 10px 12px;
@@ -426,6 +451,7 @@ transition: 0.5s all ease;
 -o-transition: 0.5s all ease;
 -ms-transition: 0.5s all ease;
 }
+
 .contact-right textarea{
 resize:none;
 height: 205px;
