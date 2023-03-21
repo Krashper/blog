@@ -6,15 +6,18 @@
 	<div class="contact">
 		<div class="container">
 			<div class="contact-head">
-				<h3>LOG IN</h3>
+				<h3>REGISTRATION</h3>
 				<form>
 					<div class="col-md-6 col-md-offset-3">
-							<input type="text" placeholder="E-mail" required/>
-							<input type="text" placeholder="Password" required/>
-                            <input type="submit" value="SEND"/>
+						<form method="post">
+							{% csrf_token %}
+            				{{ form.as_p }}
+            				<span>{{ error }}</span>
+                            <input type="submit" formmethod="post" value="REGISTER"/>
+						</form>					
 					</div>
                     <div class="col-md-9 col-md-offset-3">
-                        <a href="{% url 'registration' %}">I don't have an account</a>
+                        <a href="{% url 'login' %}">I already have an account</a>
                     </div>
 					<div class="clearfix"></div>
 				</form>
