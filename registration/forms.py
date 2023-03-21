@@ -1,19 +1,26 @@
 from django.contrib.auth.models import User
-from django.forms import ModelForm, TextInput
-
-class UsersForm(ModelForm):
-    class Meta:
-        model = User
-        fields = ['username', 'password', 'email']
-
-        widget = {
-            'username': TextInput(attrs={
-                'placeholder': 'Логин'
-            }),
-            'password': TextInput(attrs={
-                'placeholder': 'Пароль'
-            }),
-            'email': TextInput(attrs={
-                'placeholder': 'Email'
-            }),
-        }
+from django.forms import TextInput, EmailField, forms, CharField, EmailInput, PasswordInput
+class UsersForm(forms.Form):
+    username = CharField(
+        min_length = 2,
+        widget = TextInput(
+            attrs = {
+                'placeholder': 'Username'
+            }
+        )
+    )
+    email = EmailField(
+        widget = EmailInput(
+            attrs = {
+                'placeholder': 'Email',
+            }
+        )
+    )
+    password = CharField(
+        min_length=4,
+        widget = PasswordInput(
+            attrs = {
+                'placeholder': 'password'
+            }
+        )
+    )

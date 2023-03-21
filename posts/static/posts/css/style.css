@@ -4,6 +4,25 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
+
+input {
+	width: 100% !important;
+	padding: 10px 12px !important;
+	border: 1px solid #87655B !important;
+	font-size: 1.2em;
+	margin-bottom: 1.5em;
+	color: #87655B;
+	background:#EFEAD8;
+	font-family: 'Source Sans Pro', sans-serif;
+	outline: none;
+	font-weight: 400;
+	transition: 0.5s all ease;
+	-webkit-transition: 0.5s all ease;
+	-moz-transition: 0.5s all ease;
+	-o-transition: 0.5s all ease;
+	-ms-transition: 0.5s all ease;
+}
+
 html, body{
     font-size: 100%;
 	background:#fff;
@@ -435,9 +454,9 @@ font-family: 'Oswald', sans-serif;
 }
 
 .contact form input[type="text"],.contact-right textarea {
-width: 100%;
-padding: 10px 12px;
-border: 1px solid #87655B;
+width: 100% !important;
+padding: 10px 12px !important;
+border: 1px solid #87655B !important;
 font-size: 1.2em;
 margin-bottom: 1.5em;
 color: #87655B;
@@ -451,7 +470,6 @@ transition: 0.5s all ease;
 -o-transition: 0.5s all ease;
 -ms-transition: 0.5s all ease;
 }
-
 .contact-right textarea{
 resize:none;
 height: 205px;

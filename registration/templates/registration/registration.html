@@ -12,7 +12,9 @@
 						<form method="post">
 							{% csrf_token %}
             				{{ form.as_p }}
-            				<span>{{ error }}</span>
+							{% if error %}
+            					<span class="alert alert-danger">{{ error }}</span>
+							{% endif %}
                             <input type="submit" formmethod="post" value="REGISTER"/>
 						</form>					
 					</div>
