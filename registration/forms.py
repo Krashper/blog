@@ -1,6 +1,22 @@
 from django.contrib.auth.models import User
 from django.forms import TextInput, EmailField, forms, CharField, EmailInput, PasswordInput
 class UsersForm(forms.Form):
+    first_name = CharField(
+        min_length = 2,
+        widget = TextInput(
+            attrs = {
+                'placeholder': 'First name'
+            }
+        )
+    )
+    last_name = CharField(
+        min_length = 2,
+        widget = TextInput(
+            attrs = {
+                'placeholder': 'Last name'
+            }
+        )
+    )
     username = CharField(
         min_length = 2,
         widget = TextInput(
@@ -17,10 +33,11 @@ class UsersForm(forms.Form):
         )
     )
     password = CharField(
-        min_length=4,
+        min_length=8,
         widget = PasswordInput(
             attrs = {
-                'placeholder': 'password'
+                'placeholder': 'Password'
             }
         )
     )
+    
